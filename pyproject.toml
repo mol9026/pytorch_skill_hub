@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytorch-yongli-skill"
+version = "0.1.0"
+description = "A lightweight integration scaffold for decoupled PyTorch skill modules."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "Yongli" }
+]
+license = { text = "MIT" }
+dependencies = [
+  "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+# Keep PyTorch optional to avoid blocking imports in lightweight CI/dev environments.
+# Add specific feature groups as new skills are integrated.
+all = [
+  "torch>=2.0.0",
+  "pydantic>=2.0.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

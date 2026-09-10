@@ -1,0 +1,8 @@
+用例整改skill:
+https://github.com/KarhouTam/agent-skills/tree/master/pytorch-test-refactoring
+检视skill:
+https://gitcode.com/ken0yuan/test-modification-advisor
+错例分析skill:
+https://gitcode.com/yashi999/Ascend-AI-Frame-Agent-Skills/tree/main/skills/torch-npu-test-failure-diagnose
+社区检视skill:
+https://github.com/pytorch/pytorch/blob/main/.claude/skills/pr-review/SKILL.md

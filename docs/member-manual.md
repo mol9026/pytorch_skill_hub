@@ -9,7 +9,15 @@
 - `pr-review`：PR 代码检视
 - `pytorch-test-refactoring`：PyTorch 测试用例解耦与重构
 - `test-modification-advisor`：本地测试修改建议与合并修改
-- `torch-npu-test-failure-diagnose`：NPU 用例故障诊断
+- `torch-npu-test-failure-diagnose`：NPU 用例故障诊断（只读分析，给定用例名+日志）
+- `npu-precision-toolkit`：NPU 图模式精度排查四件套（主动实验：门禁/诊断/隔离/审计 + 穿刺模板）。部署需 NPU 服务器，PC 侧只读结果
+- `puncture-model-verify`：模型穿刺验证流程——新模型验证图模式精度的标准协议（args 契约、判定三查、台账格式），工具在 npu-precision-toolkit
+- `red-green-validation`：修复定案/提 PR 前的隔离红绿灯验证（单撤一修复 → 门禁 → 对照基线 → verdict 落盘）。多修复同时生效时强制使用
+- `server-workspace-hygiene`：服务器目录整理、debug 产物归档、带日期备份到本地、交付文档双端同步
+- `skill-harvest`：判断工作沉淀是否应收编进本仓库，并按标准结构生成 skill 草稿
+- `usage-intelligence`（薄壳）：会话成本优化，安装方法见其 SKILL.md——装到各自项目的 `.claude/` 下
+
+> 精度问题先 `torch-npu-test-failure-diagnose` 看日志（只读），需要动手验证时转 `npu-precision-toolkit`（跑实验）。
 
 ## 3. 目录结构
 

@@ -10,3 +10,8 @@ venv/
 .DS_Store
 .coverage
 htmlcov/
+
+# Claude Code personal/runtime artifacts (keep skill definitions, exclude private state)
+.claude/settings.local.json
+.claude/usage-intelligence/
+.claude/tmp_*

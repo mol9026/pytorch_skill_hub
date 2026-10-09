@@ -4,12 +4,20 @@ This project unifies several decoupled PyTorch skill modules contributed by diff
 
 ## Integrated skills
 
-The current registry includes four skill modules under the top-level `skills/` directory:
+The current registry includes nine skill modules under the top-level `skills/` directory:
 
 - `pr-review`
 - `pytorch-test-refactoring`
 - `test-modification-advisor`
 - `torch-npu-test-failure-diagnose`
+- `npu-precision-toolkit` — NPU 图模式精度排查四件套（watchdog/doctor/kernel-isolate/alias-tracker）+ 13 模型穿刺模板 + 缺陷指纹库
+- `puncture-model-verify` — 模型穿刺验证流程（build_args 契约 + 判定规则 + 台账格式；工具实体在 npu-precision-toolkit）
+- `red-green-validation` — 修复隔离验证协议（提 PR 前的红绿灯判定 + verdict 落盘）
+- `server-workspace-hygiene` — NPU 服务器工作区整理与本地备份（巡检/归档/备份/双端同步）
+- `skill-harvest` — 工作成果归集判定与 skill 脚手架（团队沉淀入口）
+
+Plus one runtime-layer skill exposed via a thin shell for discovery:
+- `usage-intelligence` — Claude Code 会话用量与成本优化（实现在 `.claude/skills/`，本目录为团队发现层薄壳）
 
 ## Project structure
 

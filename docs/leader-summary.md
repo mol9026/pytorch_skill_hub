@@ -2,12 +2,12 @@
 
 ## 1. 背景
 
-项目中已经汇集了多个相互独立的 PyTorch 相关 skill，分别覆盖：
+项目中已经汇集了多个相互独立的 PyTorch 相关 skill（现 11 个，四大类），分别覆盖：
 
-- PR 检视：`pr-review`
-- 用例解耦与重构：`pytorch-test-refactoring`
-- 本地测试修改建议：`test-modification-advisor`
-- NPU 用例失败诊断：`torch-npu-test-failure-diagnose`
+- 测试质量类：PR 检视 `pr-review`、用例解耦与重构 `pytorch-test-refactoring`、测试修改建议 `test-modification-advisor`、NPU 用例失败诊断 `torch-npu-test-failure-diagnose`
+- NPU 图模式精度类（llama2_7b 项目沉淀）：四件套工具 `npu-precision-toolkit`、穿刺协议 `puncture-model-verify`、修复隔离验证 `red-green-validation`
+- 工程流程类：服务器整理备份 `server-workspace-hygiene`、成果归集 `skill-harvest`
+- 会话与成本类：模型路由审计 `model-switch-guard`、会话成本优化 `usage-intelligence`
 
 这些 skill 各自具备明确职责，但此前分散在不同目录中，缺乏统一入口与发现机制，导致：
 
@@ -67,7 +67,7 @@ python -m pytorch_yongli_skill --root . route "我需要诊断 PyTorch-NPU 用�
 
 ## 6. 当前阶段判断
 
-该整合已完成“统一发现 + 统一入口 + 自动路由”的基础闭环，适合在项目中作为统一 skill 平台的第一版基础设施。
+该整合已完成“统一发现 + 统一入口 + 自动路由”的基础闭环，并完成两批实战归集（NPU 精度工具 + 工程流程协议，能力总览见 `docs/skills-catalog.md`），适合作为统一 skill 平台的基础设施。
 
 后续如果继续增强，可以进一步扩展：
 

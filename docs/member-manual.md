@@ -1,5 +1,7 @@
 # PyTorch skill 整合使用手册
 
+> 选 skill 先看 `skills-catalog.md`（按"想做什么"选）；本手册讲怎么装、怎么用统一 CLI。
+
 ## 1. 目标
 
 本项目用于统一管理多个 PyTorch 相关 skill，帮助团队成员用一套入口发现、查看和调用各类能力。
@@ -26,13 +28,22 @@
 pytorch_yongli_skill/
 ├── README.md
 ├── docs/
-│   ├── leader-summary.md
-│   └── member-manual.md
-├── skills/
-│   ├── pr-review/
+│   ├── leader-summary.md        # 汇报材料
+│   ├── member-manual.md         # 本手册
+│   ├── skills-catalog.md        # 能力目录（按"想做什么"选 skill，先看这个）
+│   └── skilllist.txt            # 外部 skill 来源链接
+├── skills/                      # 11 个 skill，四大类（见 skills-catalog.md）
+│   ├── pr-review/                         # 测试质量类
 │   ├── pytorch-test-refactoring/
 │   ├── test-modification-advisor/
-│   └── torch-npu-test-failure-diagnose/
+│   ├── torch-npu-test-failure-diagnose/
+│   ├── npu-precision-toolkit/             # NPU 精度类（工具层）
+│   ├── puncture-model-verify/             #            （流程层）
+│   ├── red-green-validation/              #            （定案协议层）
+│   ├── server-workspace-hygiene/          # 工程流程类
+│   ├── skill-harvest/                     #
+│   ├── model-switch-guard/                # 会话与成本类
+│   └── usage-intelligence/                # （薄壳，实现在 .claude/skills/）
 ├── src/
 │   └── pytorch_yongli_skill/
 │       ├── __init__.py
@@ -53,11 +64,20 @@ python -m pytorch_yongli_skill --root . list
 输出示例：
 
 ```text
+model-switch-guard
+npu-precision-toolkit
 pr-review
+puncture-model-verify
 pytorch-test-refactoring
+red-green-validation
+server-workspace-hygiene
+skill-harvest
 test-modification-advisor
 torch-npu-test-failure-diagnose
+usage-intelligence
 ```
+
+> 中文 skill 的 show/read 输出乱码时加 `PYTHONIOENCODING=utf-8`。
 
 ### 4.2 查看某个 skill 的元信息
 
@@ -127,10 +147,10 @@ python -m pytorch_yongli_skill --root . run <skill-name> -- <pass-through args>
 
 新增 skill 时，只需按照以下规则：
 
-1. 在 `skills/` 下新增一个目录
-2. 提供 `SKILL.md`
-3. 如有可执行脚本，可继续放在目录内
-4. 统一入口会自动发现并注册
+1. 先过 `skill-harvest` 的三关判定（价值/稳定/归属）
+2. 按其标准脚手架建目录 + SKILL.md
+3. 统一入口会自动发现并注册
+4. 在 skill-harvest 的已归集清单登记
 
 ## 8. 使用建议
 

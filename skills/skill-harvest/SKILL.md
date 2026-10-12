@@ -85,6 +85,7 @@ skills/<skill-name>/
 | server-workspace-hygiene | 服务器整理 + 本地备份（09-28/29 两轮实战） | 2026-10-09 |
 | puncture-model-verify（流程层） | 50 模型穿刺计划（13 次执行收敛） | 2026-10-09 |
 | red-green-validation | rc2/rc3 verdict + rc4 红灯（三次实战） | 2026-10-09 |
+| model-switch-guard | CC Switch 网关日志审计（23 天 4256 请求实测，4 类事件 0 误报） | 2026-10-12 |
 
 ## 待归集候选（性能方向预铺，2026-10-09 勘察）
 

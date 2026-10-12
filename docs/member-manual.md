@@ -15,6 +15,7 @@
 - `red-green-validation`：修复定案/提 PR 前的隔离红绿灯验证（单撤一修复 → 门禁 → 对照基线 → verdict 落盘）。多修复同时生效时强制使用
 - `server-workspace-hygiene`：服务器目录整理、debug 产物归档、带日期备份到本地、交付文档双端同步
 - `skill-harvest`：判断工作沉淀是否应收编进本仓库，并按标准结构生成 skill 草稿
+- `model-switch-guard`：从 CC Switch 网关日志审计模型切换（四类事件区分 + 缓存损失估算），装 CC Switch 且多模型混用的同事建议装
 - `usage-intelligence`（薄壳）：会话成本优化，安装方法见其 SKILL.md——装到各自项目的 `.claude/` 下
 
 > 精度问题先 `torch-npu-test-failure-diagnose` 看日志（只读），需要动手验证时转 `npu-precision-toolkit`（跑实验）。

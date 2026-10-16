@@ -4,7 +4,7 @@ This project unifies several decoupled PyTorch skill modules contributed by diff
 
 ## Integrated skills
 
-The registry currently includes **11 skill modules** under the top-level `skills/` directory, organized by capability domain:
+The registry currently includes **12 skill modules** under the top-level `skills/` directory, organized by capability domain:
 
 ### 测试质量类（团队原有）
 
@@ -22,6 +22,7 @@ The registry currently includes **11 skill modules** under the top-level `skills
 ### 工程流程类（2026-10-09 归集）
 
 - `server-workspace-hygiene` — NPU 服务器工作区整理与本地备份（巡检/归档/带日期备份/双端同步）
+- `npu-fleet-ops` — NPU 机群运维：多机接入（SSH config 别名+公钥分发）、资源审计五件套、磁盘病灶定位、备份双端校验、重装迁移清单
 - `skill-harvest` — 工作成果归集判定（三关标准）与 skill 脚手架；维护候选清单
 
 ### 会话与成本类

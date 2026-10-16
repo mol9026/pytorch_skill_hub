@@ -86,12 +86,14 @@ skills/<skill-name>/
 | puncture-model-verify（流程层） | 50 模型穿刺计划（13 次执行收敛） | 2026-10-09 |
 | red-green-validation | rc2/rc3 verdict + rc4 红灯（三次实战） | 2026-10-09 |
 | model-switch-guard | CC Switch 网关日志审计（23 天 4256 请求实测，4 类事件 0 误报） | 2026-10-12 |
+| npu-fleet-ops | NPU 机群运维（4 台接入/审计/备份/重装迁移实战） | 2026-10-16 |
 
 ## 待归集候选（性能方向预铺，2026-10-09 勘察）
 
 | 候选 | 状态 | 说明 |
 |------|------|------|
-| npu-perf-toolkit | ⏳ 等待素材 | 性能方向做出第一个可复用 profile/对比流程时归集（llama 慢 12%、T5 tile-contract 两调查点的产出） |
+| npu-perf-toolkit | ⏳ 等待素材 | 性能穿刺流程走完 ≥2 个模型后归集（P0 Bart 已完整闭环：口径澄清→复现→归因→ACLGraph 排除；P1 Albert/DistilBert 进行中） |
+| npu-provision | ⏳ 等待需求 | 多机 NPU 工具链部署（env 化脚本已就绪在 npu-precision-toolkit，等实际部署一次后收编流程） |
 | gitcode-pr-flow | ⏳ 不够稳定线 | 已执行 2 次（PR-3/#47232、PR-4+6/#47261），判定规则要求 ≥3 次无修改收敛；且含 token 类敏感操作，归集前必须改成"用户提供 token"模式并加安全注意事项。下次提 PR 流程零改动即达标 |
 | puncture-model-verify 独立化 | ✅ 已归集（薄壳流程层） | 工具/模板实体留 toolkit，防双份漂移 |
 
